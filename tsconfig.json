@@ -17,5 +17,9 @@
     "jsx": "react-jsx",
     "baseUrl": "src"
   },
-  "include": ["src", ".eslintrc.json"]
+  "include": ["src", ".eslintrc.json"],
+  "typedocOptions": {
+    "entryPoints": ["src/index.tsx"],
+    "out": "docs"
+  }
 }

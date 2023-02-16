@@ -30,6 +30,7 @@
     "jsx-a11y",
     "import",
     "@typescript-eslint",
+    "eslint-plugin-tsdoc",
     "prettier"
   ],
   "settings": {
