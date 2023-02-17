@@ -3,7 +3,7 @@ import {
   TUserActivity,
   TUserAverageSessions,
   TUserPerformance,
-} from 'types/UserTypes';
+} from 'types';
 
 const USER_MAIN_DATA: TUserMainData[] = [
   {
