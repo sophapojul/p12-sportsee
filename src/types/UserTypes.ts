@@ -1,17 +1,21 @@
+type TUserInfos = {
+  firstName: string;
+  lastName: string;
+  age: number;
+};
+
+type TKeyData = {
+  calorieCount: number;
+  proteinCount: number;
+  carbohydrateCount: number;
+  lipidCount: number;
+};
+
 export type TUserMainData = {
   id: number;
-  userInfos: {
-    firstName: string;
-    lastName: string;
-    age: number;
-  };
+  userInfos: TUserInfos;
   todayScore: number;
-  keyData: {
-    calorieCount: number;
-    proteinCount: number;
-    carbohydrateCount: number;
-    lipidCount: number;
-  };
+  keyData: TKeyData;
 };
 
 type TSessionsAct = {
@@ -40,15 +44,17 @@ export type TData = {
   kind: number;
 };
 
+const kind = {
+  1: 'cardio',
+  2: 'energy',
+  3: 'endurance',
+  4: 'strength',
+  5: 'speed',
+  6: 'intensity',
+} as const;
+
 export type TUserPerformance = {
   userId: number;
-  kind: {
-    1: 'cardio';
-    2: 'energy';
-    3: 'endurance';
-    4: 'strength';
-    5: 'speed';
-    6: 'intensity';
-  };
+  kind: typeof kind;
   data: TData[];
 };
