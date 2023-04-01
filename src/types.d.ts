@@ -98,3 +98,8 @@ export {
   IPerformance,
   IUserPerformanceData,
 };
+
+export type ErrorPageProps = {
+  message: string;
+  status: number;
+};

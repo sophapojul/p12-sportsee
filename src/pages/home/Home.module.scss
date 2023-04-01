@@ -1,0 +1,19 @@
+@use 'styles/abstracts' as a;
+@use 'styles/base';
+
+.main {
+  display: grid;
+  place-items: center;
+  padding: 6rem;
+  .ul {
+    display: flex;
+    flex-direction: column;
+
+    * {
+      display: flex;
+      align-items: center;
+      height: 100px;
+      color: #e60000;
+    }
+  }
+}
