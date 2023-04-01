@@ -4,22 +4,30 @@ import { useParams } from 'react-router-dom';
 import SideBar from 'components/sidebar';
 import { IUserInfos } from 'types';
 
-import { getUserActivity, getUserInfos } from 'services/api';
+import {
+  getUserActivity,
+  getUserAverageSessions,
+  getUserInfos,
+} from 'services/api';
+import UserInfos from 'components/dashboard/user';
+import DailyActivity from 'components/dashboard/dailyActivity';
+import AverageSessions from 'components/dashboard/averageSessions';
 import styles from './Dashboard.module.scss';
-import UserInfos from './user';
-import DailyActivity from './dailyActivity';
 
 function Dashboard() {
   const { id } = useParams<{ id: string }>();
   const [userData, setUserData] = useState<IUserInfos>();
   const [activityData, setActivityData] = useState([]);
+  const [sessionsAverageData, setSessionsAverageData] = useState([]);
   useEffect(() => {
     (async () => {
       if (id) {
         const user = await getUserInfos(id);
         const activity = await getUserActivity(id);
+        const average = await getUserAverageSessions(id);
         setUserData(user);
         setActivityData(activity);
+        setSessionsAverageData(average);
       }
     })();
   }, [id]);
@@ -32,7 +40,7 @@ function Dashboard() {
           <DailyActivity sessions={activityData} />
         </article>
         <article className={styles.sessions} style={{ gridArea: 'sessions' }}>
-          sessions
+          <AverageSessions sessions={sessionsAverageData} />
         </article>
         <article
           className={styles.performance}
