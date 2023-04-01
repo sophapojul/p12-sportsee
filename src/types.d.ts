@@ -1,50 +1,80 @@
-type TUserInfos = {
+interface IUserInfos {
   firstName: string;
   lastName: string;
   age: number;
-};
+}
 
-type TKeyData = {
+interface IKeyData {
   calorieCount: number;
   proteinCount: number;
   carbohydrateCount: number;
   lipidCount: number;
-};
+}
 
-export type TUserMainData = {
-  id: number;
-  userInfos: TUserInfos;
-  todayScore: number;
-  keyData: TKeyData;
-};
-
-type TSessionsAct = {
+interface IActivity {
   day: string;
   kilogram: number;
   calories: number;
-};
+}
 
-export type TUserActivity = {
-  userId: number;
-  sessions: TSessionsAct[];
-};
-
-type TSessionsAvr = {
+interface ISessionsAverage {
   day: number;
   sessionLength: number;
-};
+}
 
-export type TUserAverageSessions = {
-  userId: number;
-  sessions: TSessionsAvr[];
-};
+interface ISessionsAverageDayStr {
+  day: string;
+  sessionLength: number;
+}
 
-export type TData = {
+interface IPerformanceData {
+  [key: number]: string;
+}
+
+interface IPerformance {
   value: number;
   kind: number;
-};
+}
 
-const kind = {
+interface IUserMainData {
+  id: number;
+  userInfos: IUserInfos;
+  score?: number;
+  todayScore?: number;
+  keyData: IKeyData;
+}
+
+interface IUserActivityData {
+  userId: number;
+  sessions: IActivity[];
+}
+
+interface IUserSessionsAverageDayStrData {
+  userId: number;
+  sessions: ISessionsAverageDayStr[];
+}
+
+interface IUserSessionsAverageData {
+  userId: number;
+  sessions: ISessionsAverage[];
+}
+
+interface IUserPerformanceData {
+  userId: number;
+  kind: IPerformanceData;
+  data: IPerformance[];
+}
+
+interface Kind {
+  1: string;
+  2: string;
+  3: string;
+  4: string;
+  5: string;
+  6: string;
+}
+
+const kindValues = {
   1: 'cardio',
   2: 'energy',
   3: 'endurance',
@@ -53,8 +83,18 @@ const kind = {
   6: 'intensity',
 } as const;
 
-export type TUserPerformance = {
-  userId: number;
-  kind: typeof kind;
-  data: TData[];
+export {
+  IUserInfos,
+  IKeyData,
+  IUserMainData,
+  IUserActivityData,
+  IActivity,
+  ISessionsAverage,
+  ISessionsAverageDayStr,
+  IUserSessionsAverageDayStrData,
+  IUserSessionsAverageData,
+  Kind,
+  kindValues,
+  IPerformance,
+  IUserPerformanceData,
 };

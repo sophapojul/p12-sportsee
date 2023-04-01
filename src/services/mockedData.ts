@@ -1,11 +1,11 @@
 import {
-  TUserMainData,
-  TUserActivity,
-  TUserAverageSessions,
-  TUserPerformance,
+  IUserActivityData,
+  IUserMainData,
+  IUserPerformanceData,
+  IUserSessionsAverageData,
 } from 'types';
 
-const USER_MAIN_DATA: TUserMainData[] = [
+const USER_MAIN_DATA: IUserMainData[] = [
   {
     id: 12,
     userInfos: {
@@ -38,7 +38,7 @@ const USER_MAIN_DATA: TUserMainData[] = [
   },
 ];
 
-const USER_ACTIVITY: TUserActivity[] = [
+const USER_ACTIVITY: IUserActivityData[] = [
   {
     userId: 12,
     sessions: [
@@ -121,7 +121,7 @@ const USER_ACTIVITY: TUserActivity[] = [
   },
 ];
 
-const USER_AVERAGE_SESSIONS: TUserAverageSessions[] = [
+const USER_AVERAGE_SESSIONS: IUserSessionsAverageData[] = [
   {
     userId: 12,
     sessions: [
@@ -190,7 +190,7 @@ const USER_AVERAGE_SESSIONS: TUserAverageSessions[] = [
   },
 ];
 
-const USER_PERFORMANCE: TUserPerformance[] = [
+const USER_PERFORMANCE: IUserPerformanceData[] = [
   {
     userId: 12,
     kind: {
