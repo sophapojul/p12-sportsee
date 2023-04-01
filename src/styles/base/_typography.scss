@@ -1,0 +1,21 @@
+@use 'styles/abstracts' as a;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: a.$ff;
+  font-size: a.$fz-base;
+  font-weight: a.$fw-regular;
+  line-height: a.$lh-base;
+  * {
+    color: a.$c-root;
+  }
+}
+
+a {
+  color: a.$c-nav;
+}
+
+h1 {
+  font-size: a.$fz-xl;
+}
