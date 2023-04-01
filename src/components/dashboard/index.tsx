@@ -8,10 +8,12 @@ import {
   getUserActivity,
   getUserAverageSessions,
   getUserInfos,
+  getUserPerformance,
 } from 'services/api';
 import UserInfos from 'components/dashboard/user';
 import DailyActivity from 'components/dashboard/dailyActivity';
 import AverageSessions from 'components/dashboard/averageSessions';
+import Performance from 'components/dashboard/performance';
 import styles from './Dashboard.module.scss';
 
 function Dashboard() {
@@ -19,15 +21,18 @@ function Dashboard() {
   const [userData, setUserData] = useState<IUserInfos>();
   const [activityData, setActivityData] = useState([]);
   const [sessionsAverageData, setSessionsAverageData] = useState([]);
+  const [performanceData, setPerformanceData] = useState();
   useEffect(() => {
     (async () => {
       if (id) {
         const user = await getUserInfos(id);
         const activity = await getUserActivity(id);
         const average = await getUserAverageSessions(id);
+        const performance = await getUserPerformance(id);
         setUserData(user);
         setActivityData(activity);
         setSessionsAverageData(average);
+        setPerformanceData(performance);
       }
     })();
   }, [id]);
@@ -46,7 +51,7 @@ function Dashboard() {
           className={styles.performance}
           style={{ gridArea: 'performance' }}
         >
-          performance
+          {performanceData && <Performance performance={performanceData} />}
         </article>
         <article className={styles.score} style={{ gridArea: 'score' }}>
           score
