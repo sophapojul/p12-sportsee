@@ -33,6 +33,7 @@
     "eslint-plugin-tsdoc",
     "prettier"
   ],
+  "ignorePatterns": ["public/**/*.{js,ts}", "server/**/*.js"],
   "settings": {
     "react": {
       "version": "detect"
