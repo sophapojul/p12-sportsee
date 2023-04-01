@@ -1,6 +1,24 @@
+# ![SportSee](public/logo.svg)
+
+# Web application with React and Recharts
+
+## Environment
+
+- [Node v18.15](https://nodejs.org/en/)
+- [React v18.2](https://reactjs.org/)
+- [Recharts v2.5.0](https://recharts.org/en-US/)
+- [Typescript v4.9.5](https://www.typescriptlang.org/)
+- styles with [Sass](https://sass-lang.com/) and [CSS Modules](https://github.com/css-modules/css-modules)
+- linter [eslint](https://eslint.org/) configuration [airbnb](https://airbnb.io/javascript/)
+- formater [Prettier](https://prettier.io/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## In the terminal [Clone the project](https://github.com/sophapojul/p12-sportsee.git) && cd p12-sportsee && npm i && npm start
+
+## In the server directory you can launch a local server with mockeded data : type npm i && npm start
 
 ## Available Scripts
 
