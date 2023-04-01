@@ -3,6 +3,69 @@
 
 .main {
   background-color: #fff;
-  min-height: 933px;
+  min-width: max-content;
+  min-height: max-content;
   display: flex;
+  .section {
+    padding: 4rem 6rem;
+    display: grid;
+    gap: 2rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      'header header header header'
+      'activity activity activity keyData'
+      'sessions performance score keyData';
+
+    article {
+      border-radius: 5px;
+    }
+
+    .activity {
+      width: 835px;
+      height: 320px;
+      background-color: #fbfbfb;
+      .recharts-wrapper {
+        border: 1px solid #e5e5e5;
+        height: 320px;
+      }
+    }
+    .sessions,
+    .performance,
+    .score {
+      width: 258px;
+      height: 263px;
+    }
+    .sessions {
+      background-color: #ff0000;
+    }
+    .performance {
+      background-color: #282d30;
+    }
+    .score {
+      background-color: #fbfbfb;
+    }
+    .keyData {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      list-style: none;
+      li {
+        display: flex;
+        gap: 1.5rem;
+        background-color: #fbfbfb;
+        padding: 2rem;
+        p {
+          display: flex;
+          flex-direction: column;
+          font-size: 20px;
+          font-weight: 700;
+          color: #282d30;
+          span {
+            font-size: 14px;
+            color: #74798c;
+          }
+        }
+      }
+    }
+  }
 }
