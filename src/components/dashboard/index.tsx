@@ -5,6 +5,7 @@ import SideBar from 'components/sidebar';
 import { IUserInfos } from 'types';
 
 import {
+  getTodayScore,
   getUserActivity,
   getUserAverageSessions,
   getUserInfos,
@@ -15,6 +16,7 @@ import DailyActivity from 'components/dashboard/dailyActivity';
 import AverageSessions from 'components/dashboard/averageSessions';
 import Performance from 'components/dashboard/performance';
 import styles from './Dashboard.module.scss';
+import Score from './score';
 
 function Dashboard() {
   const { id } = useParams<{ id: string }>();
@@ -22,6 +24,7 @@ function Dashboard() {
   const [activityData, setActivityData] = useState([]);
   const [sessionsAverageData, setSessionsAverageData] = useState([]);
   const [performanceData, setPerformanceData] = useState();
+  const [scoreData, setScoreData] = useState();
   useEffect(() => {
     (async () => {
       if (id) {
@@ -29,10 +32,12 @@ function Dashboard() {
         const activity = await getUserActivity(id);
         const average = await getUserAverageSessions(id);
         const performance = await getUserPerformance(id);
+        const score = await getTodayScore(id);
         setUserData(user);
         setActivityData(activity);
         setSessionsAverageData(average);
         setPerformanceData(performance);
+        setScoreData(score);
       }
     })();
   }, [id]);
@@ -54,7 +59,7 @@ function Dashboard() {
           {performanceData && <Performance performance={performanceData} />}
         </article>
         <article className={styles.score} style={{ gridArea: 'score' }}>
-          score
+          {scoreData && <Score todayScore={scoreData} />}
         </article>
         <article className={styles.keyData} style={{ gridArea: 'keyData' }}>
           keyData
