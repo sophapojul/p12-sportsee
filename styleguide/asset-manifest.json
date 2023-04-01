@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/build/bundle.a8174e15.js",
+    "main.css": "/static/css/main.dfcb6300.css",
+    "static/media/logo.svg": "/static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
+    "static/media/swimming.svg": "/static/media/swimming.e26dba434236828a108a786d8215cd31.svg",
+    "static/media/biking.svg": "/static/media/biking.d516c0e89dbb3aaab23afac6a130ca06.svg",
+    "static/media/yoga.svg": "/static/media/yoga.6c31a2775a609d06fd5d99eb347250ed.svg",
+    "static/media/weightlifting.svg": "/static/media/weightlifting.4fe7fb9fe3554121b3d42dcb489eefd0.svg",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "build/bundle.a8174e15.js",
+    "static/css/main.dfcb6300.css"
+  ]
+}
