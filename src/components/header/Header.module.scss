@@ -1,0 +1,8 @@
+@use 'styles/abstracts' as a;
+
+.header {
+  background-color: a.$bg-nav;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+}

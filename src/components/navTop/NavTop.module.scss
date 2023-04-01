@@ -1,0 +1,19 @@
+@use 'styles/abstracts' as a;
+@use 'styles/base';
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  align-items: center;
+  height: 91px;
+  background-color: transparent;
+}
+
+.ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+  font-size: a.$fz-lg;
+}
