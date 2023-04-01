@@ -12,13 +12,13 @@
 - linter [eslint](https://eslint.org/) configuration [airbnb](https://airbnb.io/javascript/)
 - formater [Prettier](https://prettier.io/)
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## In the terminal [Clone the project](https://github.com/sophapojul/p12-sportsee.git) && cd p12-sportsee && npm i && npm start
 
-## In the server directory you can launch a local server with mockeded data : type npm i && npm start
+## In the server directory you can launch a local server with mocked data : type npm i && npm start
 
 ## Available Scripts
 
