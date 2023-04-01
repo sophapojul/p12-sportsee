@@ -1,0 +1,15 @@
+@use 'styles/abstracts' as a;
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+  width: 7rem;
+  background-color: a.$bg-nav;
+
+  p {
+    transform: rotate(270deg);
+  }
+}

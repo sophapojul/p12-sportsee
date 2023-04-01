@@ -1,0 +1,8 @@
+@use 'styles/abstracts' as a;
+@use 'styles/base';
+
+.main {
+  background-color: #fff;
+  min-height: 933px;
+  display: flex;
+}

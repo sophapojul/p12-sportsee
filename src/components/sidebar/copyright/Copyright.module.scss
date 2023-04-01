@@ -1,0 +1,9 @@
+@use 'styles/abstracts' as a;
+@use 'styles/base';
+
+.p {
+  color: a.$c-nav;
+  width: max-content;
+  font-size: a.$fz-sm;
+  margin: 3rem;
+}
