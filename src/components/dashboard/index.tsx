@@ -59,10 +59,12 @@ function Dashboard() {
       <section className={styles.section}>
         {userData && <UserInfos userData={userData} />}
         <article className={styles.activity} style={{ gridArea: 'activity' }}>
-          <DailyActivity sessions={activityData} />
+          {activityData && <DailyActivity sessions={activityData} />}
         </article>
         <article className={styles.sessions} style={{ gridArea: 'sessions' }}>
-          <AverageSessions sessions={sessionsAverageData} />
+          {sessionsAverageData && (
+            <AverageSessions sessions={sessionsAverageData} />
+          )}
         </article>
         <article
           className={styles.performance}
