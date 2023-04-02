@@ -8,12 +8,13 @@
 </div>
 
 The goal is to present a new version of the user profile page.\
-This page will allow the user to track the number of sessions performed and the number of calories burned.
+This page will allow the user to track the number of sessions performed and the number of calories burned.\
+The project must be readable on screens of at least 1024 by 780 pixels.
 
 ## Environment
 
 - [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)
-- [![npm version](https://img.shields.io/badge/node-v18.15-339933?logo=node.js)](https://www.nodejs.org/en/download) [Node](https://nodejs.org/en/)
+- [![npm version](https://img.shields.io/badge/node--lts-v18.15-339933?logo=node.js)](https://www.nodejs.org/en/download) [Node](https://nodejs.org/en/)
 - [![npm version](https://img.shields.io/npm/v/react.svg?logo=react&style=flat)](https://www.npmjs.com/package/react) [React](https://reactjs.org/)
 - [![npm package][npm-badge]][npm] [React-routeur-dom](https://reactrouter.com/en/main)
 
@@ -24,7 +25,7 @@ This page will allow the user to track the number of sessions performed and the 
 - [![npm version](https://img.shields.io/badge/npm-v4.9.5-3178C6?logo=typescript)](https://www.npmjs.com/package/typescript) [Typescript](https://www.typescriptlang.org/)
 - [![npm version](https://img.shields.io/npm/v/prop-types.svg?&style=flat)](https://www.npmjs.com/package/react) [Prop-types](https://github.com/facebook/prop-types)
 - styles with [Sass](https://sass-lang.com/) ![npm](https://img.shields.io/npm/v/sass?color=CC6699) and [CSS Modules](https://github.com/css-modules/css-modules)
-- linter [eslint](https://eslint.org/) ![npm](https://img.shields.io/npm/v/eslint?logo=eslint) configuration [airbnb](https://airbnb.io/javascript/)
+- linter [eslint](https://eslint.org/) ![npm](https://img.shields.io/npm/v/eslint?logo=eslint) configuration [airbnb](https://airbnb.io/javascript/) <img  src="https://avatars.githubusercontent.com/u/698437?s=200&v=4" width="20" align="center">
 - formater [Prettier](https://prettier.io/) ![npm](https://img.shields.io/npm/v/prettier?logo=prettier)
 
 ## Installation
