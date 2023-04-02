@@ -12,15 +12,20 @@ This page will allow the user to track the number of sessions performed and the 
 
 ## Environment
 
-- [Node v18.15](https://nodejs.org/en/)
-- [React v18.2](https://reactjs.org/)
-- [React-routeur-dom v6.10.0](https://reactrouter.com/en/main)
-- [Recharts v2.5.0](https://recharts.org/en-US/)
-- [Typescript v4.9.5](https://www.typescriptlang.org/)
-- [Prop-types v15.8.1](https://github.com/facebook/prop-types)
-- styles with [Sass](https://sass-lang.com/) and [CSS Modules](https://github.com/css-modules/css-modules)
-- linter [eslint](https://eslint.org/) configuration [airbnb](https://airbnb.io/javascript/)
-- formater [Prettier](https://prettier.io/)
+- [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)
+- [![npm version](https://img.shields.io/badge/node-v18.15-339933?logo=node.js)](https://www.nodejs.org/en/download) [Node](https://nodejs.org/en/)
+- [![npm version](https://img.shields.io/npm/v/react.svg?logo=react&style=flat)](https://www.npmjs.com/package/react) [React](https://reactjs.org/)
+- [![npm package][npm-badge]][npm] [React-routeur-dom](https://reactrouter.com/en/main)
+
+  [npm-badge]: https://img.shields.io/npm/v/react-router-dom.svg?logo=react-router&style=flat
+  [npm]: https://www.npmjs.org/package/react-router-dom
+
+- ![npm](https://img.shields.io/npm/v/recharts?color=brightgreen) [Recharts](https://recharts.org/en-US/)
+- [![npm version](https://img.shields.io/badge/npm-v4.9.5-3178C6?logo=typescript)](https://www.npmjs.com/package/typescript) [Typescript](https://www.typescriptlang.org/)
+- [![npm version](https://img.shields.io/npm/v/prop-types.svg?&style=flat)](https://www.npmjs.com/package/react) [Prop-types](https://github.com/facebook/prop-types)
+- styles with [Sass](https://sass-lang.com/) ![npm](https://img.shields.io/npm/v/sass?color=CC6699) and [CSS Modules](https://github.com/css-modules/css-modules)
+- linter [eslint](https://eslint.org/) ![npm](https://img.shields.io/npm/v/eslint?logo=eslint) configuration [airbnb](https://airbnb.io/javascript/)
+- formater [Prettier](https://prettier.io/) ![npm](https://img.shields.io/npm/v/prettier?logo=prettier)
 
 ## Installation
 
