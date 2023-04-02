@@ -47,6 +47,8 @@ otherwise you have a local server with mocked data in the directory `server` :
 - `cd server && npm i`
 - `npm start` to launch it.
 
+The variable `REACT_APP_LOCAL_DATA=true` in the .env file set the local mocked data otherwise a server.
+
 ## Available Scripts
 
 In the project directory, you can run:
