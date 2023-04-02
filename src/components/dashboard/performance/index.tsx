@@ -32,7 +32,7 @@ function Performance({ performance }: IPerformanceProps) {
   Object.assign(performance?.kind || {}, kind);
   return (
     <ResponsiveContainer width="100%" aspect={0.98}>
-      <RadarChart cx="50%" cy="50%" outerRadius={90} data={performance?.data}>
+      <RadarChart cx="50%" cy="50%" data={performance?.data} outerRadius="55%">
         <PolarGrid radialLines={false} stroke="white" />
         <PolarAngleAxis
           dataKey="kind"

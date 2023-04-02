@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-bind */
 import PropTypes from 'prop-types';
 import { ISessionsAverage } from 'types';
 import {
@@ -34,7 +33,7 @@ function CustomTooltip({ active, payload }: ITooltipProps) {
           background: 'rgba(0, 0, 0, 0.1)',
           padding: '10px',
           borderRadius: '5px',
-          height: '263px',
+          height: '100%',
           display: 'grid',
           placeItems: 'center',
         }}
@@ -76,7 +75,7 @@ function renderLegend() {
       style={{
         color: 'white',
         fontSize: '15px',
-        marginInline: '5rem',
+        marginInline: '4rem',
         marginTop: '1rem',
       }}
     >
@@ -123,6 +122,7 @@ function AverageSessions({ sessions }: IAverageSessionsProps) {
         />
         <Tooltip
           content={<CustomTooltip active={false} payload={[{ value: 0 }]} />}
+          wrapperStyle={{ bottom: '10px' }}
           position={{ y: 0 }}
           offset={0}
         />

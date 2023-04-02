@@ -3,11 +3,10 @@
 
 .main {
   background-color: #fff;
-  min-width: max-content;
-  min-height: max-content;
   display: flex;
   .section {
-    padding: 4rem 6rem;
+    width: 100%;
+    padding: clamp(1rem, 3vw, 4rem) clamp(1rem, 3vw, 6rem);
     display: grid;
     gap: 2rem;
     grid-auto-columns: 1fr;
@@ -15,25 +14,15 @@
       'header header header header'
       'activity activity activity keyData'
       'sessions performance score keyData';
-
     article {
       border-radius: 5px;
     }
-
     .activity {
-      width: 835px;
-      height: 320px;
       background-color: #fbfbfb;
       .recharts-wrapper {
         border: 1px solid #e5e5e5;
         height: 320px;
       }
-    }
-    .sessions,
-    .performance,
-    .score {
-      width: 258px;
-      height: 263px;
     }
     .sessions {
       background-color: #ff0000;

@@ -175,15 +175,21 @@ function DailyActivity({ sessions }: IActivityProps): JSX.Element {
           hide
         />
         <Tooltip
-          wrapperStyle={{ top: -30, left: 10 }}
+          wrapperStyle={{
+            top: -30,
+            left: 10,
+            height: '22%',
+            width: '5%',
+          }}
           contentStyle={{
             padding: '0.4rem',
+            height: '100%',
             backgroundColor: '#e60000',
             border: 'none',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '1rem',
+            justifyContent: 'space-around',
           }}
           itemStyle={{ color: 'white', fontSize: 7 }}
           content={<CustomTooltip />}

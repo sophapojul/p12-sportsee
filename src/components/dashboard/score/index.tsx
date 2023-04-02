@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Cell, Pie, PieChart, Legend } from 'recharts';
+import { Cell, Pie, PieChart, Legend, ResponsiveContainer } from 'recharts';
 
 interface IScoreProps {
   todayScore: number;
@@ -40,7 +40,7 @@ function CustomizedLabel(props: ICustomizedLabelProps) {
       y={cy}
       fill="#000"
       textAnchor="middle"
-      style={{ fontSize: 26, lineHeight: 26 }}
+      style={{ fontSize: 'clamp(1rem, 2vw, 2rem)', lineHeight: 26 }}
     >
       {`${(percent * value * 100).toFixed(0)}%`}
       <tspan x={cx} dy="1.2em" style={{ fontSize: 16, fill: '#74798c' }}>
@@ -63,6 +63,9 @@ function CustomizedLegend({ payload }: ICustomizedLegendProps) {
     <p
       style={{
         color: 'black',
+        fontSize: 'clamp(1rem, 2vw, 1.5rem)',
+        marginTop: 'clamp(0.5rem, 1.5vw, 3rem)',
+        marginLeft: 'clamp(0.5rem, 1.2vw, 3rem)',
       }}
     >
       {payload[1].value}
@@ -90,37 +93,38 @@ CustomizedLegend.defaultProps = {
 function Score({ todayScore }: IScoreProps) {
   const data = [{ name: 'Score', value: todayScore }];
   return (
-    <PieChart width={258} height={263}>
-      <Pie
-        data={[{ name: 'A', value: 1 }]}
-        dataKey="value"
-        outerRadius={60}
-        stroke="none"
-      >
-        <Cell fill="white" />
-      </Pie>
-      <Pie
-        data={data}
-        dataKey="value"
-        startAngle={90}
-        endAngle={360 * todayScore + 90}
-        innerRadius={60}
-        outerRadius={70}
-        fill="#ff0000"
-        cornerRadius={5}
-        stroke="none"
-        labelLine={false}
-        label={CustomizedLabel}
-      >
-        <Cell fill="red" />
-      </Pie>
-      <Legend
-        align="left"
-        verticalAlign="top"
-        wrapperStyle={{ fontSize: 15, marginLeft: 30, marginTop: 24 }}
-        content={<CustomizedLegend />}
-      />
-    </PieChart>
+    <ResponsiveContainer width="100%" aspect={0.98}>
+      <PieChart>
+        <Pie
+          data={[{ name: 'A', value: 1 }]}
+          dataKey="value"
+          outerRadius={60}
+          stroke="none"
+        >
+          <Cell fill="white" />
+        </Pie>
+        <Pie
+          data={data}
+          dataKey="value"
+          startAngle={90}
+          endAngle={360 * todayScore + 90}
+          innerRadius={60}
+          outerRadius={70}
+          fill="#ff0000"
+          cornerRadius={5}
+          stroke="none"
+          labelLine={false}
+          label={CustomizedLabel}
+        >
+          <Cell fill="red" />
+        </Pie>
+        <Legend
+          align="left"
+          verticalAlign="top"
+          content={<CustomizedLegend />}
+        />
+      </PieChart>
+    </ResponsiveContainer>
   );
 }
 Score.propTypes = {

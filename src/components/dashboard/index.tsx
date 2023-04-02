@@ -23,6 +23,10 @@ import Fat from 'components/svg/Fat';
 import Protein from 'components/svg/Protein';
 import styles from './Dashboard.module.scss';
 
+/**
+ * JSX Element render the dashboard with daily activity bar chart, average sessions line chart, performance radar chart, score pie chart and key data cards.
+ * @returns JSXElement Dashboard
+ */
 function Dashboard() {
   const { id } = useParams<{ id: string }>();
   const [userData, setUserData] = useState<IUserInfos>();
