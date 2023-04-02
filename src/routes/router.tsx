@@ -9,33 +9,36 @@ import Settings from 'pages/settings';
 import Root from './Root';
 
 /** create a browser router */
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: ':id',
-        element: <Dashboard />,
-      },
-      {
-        path: 'profile',
-        element: <Profile />,
-      },
-      {
-        path: 'settings',
-        element: <Settings />,
-      },
-      {
-        path: 'community',
-        element: <Community />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Root />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: ':id',
+          element: <Dashboard />,
+        },
+        {
+          path: 'profile',
+          element: <Profile />,
+        },
+        {
+          path: 'settings',
+          element: <Settings />,
+        },
+        {
+          path: 'community',
+          element: <Community />,
+        },
+      ],
+    },
+  ],
+  { basename: `${process.env.PUBLIC_URL}` }
+);
 export default router;
