@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/p12-sportsee/static/css/main.0cc84c6c.css",
+    "main.css": "/p12-sportsee/static/css/main.5064e205.css",
     "main.js": "/p12-sportsee/static/js/main.32e186b9.js",
     "static/media/logo.svg": "/p12-sportsee/static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
     "static/media/swimming.svg": "/p12-sportsee/static/media/swimming.e26dba434236828a108a786d8215cd31.svg",
@@ -8,11 +8,11 @@
     "static/media/yoga.svg": "/p12-sportsee/static/media/yoga.6c31a2775a609d06fd5d99eb347250ed.svg",
     "index.html": "/p12-sportsee/index.html",
     "static/media/weightlifting.svg": "/p12-sportsee/static/media/weightlifting.4fe7fb9fe3554121b3d42dcb489eefd0.svg",
-    "main.0cc84c6c.css.map": "/p12-sportsee/static/css/main.0cc84c6c.css.map",
+    "main.5064e205.css.map": "/p12-sportsee/static/css/main.5064e205.css.map",
     "main.32e186b9.js.map": "/p12-sportsee/static/js/main.32e186b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.0cc84c6c.css",
+    "static/css/main.5064e205.css",
     "static/js/main.32e186b9.js"
   ]
 }
