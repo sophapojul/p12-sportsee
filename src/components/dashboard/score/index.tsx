@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import { Cell, Pie, PieChart, Legend, ResponsiveContainer } from 'recharts';
+import { IUserMainData } from 'types';
 
 interface IScoreProps {
-  todayScore: number;
+  todayScore: IUserMainData['score'] | IUserMainData['todayScore'];
 }
 
 interface ICustomizedLabelProps {
@@ -107,7 +108,7 @@ function Score({ todayScore }: IScoreProps) {
           data={data}
           dataKey="value"
           startAngle={90}
-          endAngle={360 * todayScore + 90}
+          endAngle={todayScore && 360 * todayScore + 90}
           innerRadius={60}
           outerRadius={70}
           fill="#ff0000"
