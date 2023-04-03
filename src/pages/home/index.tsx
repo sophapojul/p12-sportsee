@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { USER_MAIN_DATA as userInfos } from 'services/mockedData';
+import { USER_MAIN_DATA as userInfos } from 'services/mockData';
 import styles from './Home.module.scss';
 
 /**

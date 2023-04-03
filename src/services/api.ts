@@ -3,7 +3,7 @@ import {
   USER_ACTIVITY,
   USER_AVERAGE_SESSIONS,
   USER_PERFORMANCE,
-} from './mockedData';
+} from './mockData';
 
 const isLocalData = `${process.env.REACT_APP_LOCAL_DATA}`;
 
