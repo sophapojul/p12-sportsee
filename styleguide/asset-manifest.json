@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/p12-sportsee/build/bundle.7edf8873.js",
+    "main.js": "/p12-sportsee/build/bundle.dcaa0902.js",
     "main.css": "/p12-sportsee/static/css/main.ab8a8805.css",
     "static/media/logo.svg": "/p12-sportsee/static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
     "static/media/swimming.svg": "/p12-sportsee/static/media/swimming.e26dba434236828a108a786d8215cd31.svg",
@@ -10,7 +10,7 @@
     "index.html": "/p12-sportsee/index.html"
   },
   "entrypoints": [
-    "build/bundle.7edf8873.js",
+    "build/bundle.dcaa0902.js",
     "static/css/main.ab8a8805.css"
   ]
 }
