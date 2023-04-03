@@ -2,7 +2,14 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import SideBar from 'components/sidebar';
-import { IKeyData, IUserInfos } from 'types';
+import {
+  IUserInfos,
+  IActivity,
+  IKeyData,
+  ISessionsAverage,
+  IUserPerformanceData,
+  IUserMainData,
+} from 'types';
 
 import {
   getKeyData,
@@ -30,10 +37,15 @@ import styles from './Dashboard.module.scss';
 function Dashboard() {
   const { id } = useParams<{ id: string }>();
   const [userData, setUserData] = useState<IUserInfos>();
-  const [activityData, setActivityData] = useState([]);
-  const [sessionsAverageData, setSessionsAverageData] = useState([]);
-  const [performanceData, setPerformanceData] = useState();
-  const [scoreData, setScoreData] = useState();
+  const [activityData, setActivityData] = useState<IActivity[]>([]);
+  const [sessionsAverageData, setSessionsAverageData] = useState<
+    ISessionsAverage[]
+  >([]);
+  const [performanceData, setPerformanceData] =
+    useState<IUserPerformanceData>();
+  const [scoreData, setScoreData] = useState<
+    IUserMainData['score'] | IUserMainData['todayScore']
+  >();
   const [keyData, setKeyData] = useState<IKeyData>();
   useEffect(() => {
     (async () => {
