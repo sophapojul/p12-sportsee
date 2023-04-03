@@ -118,7 +118,7 @@ function AverageSessions({ sessions }: IAverageSessionsProps) {
           axisLine={false}
           tick={false}
           allowDataOverflow
-          domain={[0, 'dataMax - 50']}
+          domain={['dataMin', 'dataMax + 2']}
         />
         <Tooltip
           content={<CustomTooltip active={false} payload={[{ value: 0 }]} />}
